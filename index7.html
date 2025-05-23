@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano para Reunião de Fechamento de Projeto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        label, textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Plano para Reunião de Fechamento de Projeto</h2>
+
+    <!-- Seção 1: Feedback e Melhoria Contínua -->
+    <fieldset>
+        <legend>Feedback e Melhoria Contínua</legend>
+
+        <label for="pontos_relevantes">Quais pontos do treinamento ou programa você considera que mais contribuíram para o seu desenvolvimento ou para a performance da equipe?</label>
+        <textarea id="pontos_relevantes" name="pontos_relevantes" rows="4"></textarea>
+
+        <label for="aspectos_aprimoramento">Em sua opinião, quais aspectos do treinamento ou da implementação poderiam ser aprimorados para maximizar os resultados?</label>
+        <textarea id="aspectos_aprimoramento" name="aspectos_aprimoramento" rows="4"></textarea>
+
+        <label for="sugestoes_futuro">Que sugestões você teria para o aprimoramento de futuros treinamentos ou iniciativas de desenvolvimento?</label>
+        <textarea id="sugestoes_futuro" name="sugestoes_futuro" rows="4"></textarea>
+
+    </fieldset>
+
+    <!-- Seção 2: Lições Aprendidas -->
+    <fieldset>
+        <legend>Lições Aprendidas</legend>
+
+        <label for="insights">Quais principais insights, aprendizados ou boas práticas você identificou ao longo do processo?</label>
+        <textarea id="insights" name="insights" rows="4"></textarea>
+
+        <label for="praticas_replicaveis">Existe alguma prática ou abordagem que você acredita que deveria ser mantida e replicada em outros projetos?</label>
+        <textarea id="praticas_replicaveis" name="praticas_replicaveis" rows="4"></textarea>
+
+    </fieldset>
+
+    <!-- Seção 3: Próximos Passos -->
+    <fieldset>
+        <legend>Próximos Passos</legend>
+
+        <label for="acoes_futuras">Com base nos resultados alcançados até aqui, quais ações ou novos programas de desenvolvimento você acredita que podemos implementar para potencializar ainda mais os ganhos e garantir a evolução contínua da equipe?</label>
+        <textarea id="acoes_futuras" name="acoes_futuras" rows="4"></textarea>
+
+    </fieldset>
+
+       <button type="submit">Enviar</button>
+
+    <script>
+        document.querySelector("button").addEventListener("click", function(event) {
+            event.preventDefault();
+            alert("Dados enviados com sucesso!");
+        });
+    </script>
+
+</body>
+</html>

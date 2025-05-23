@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronograma e Indicadores de Sucesso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 800px;
+            margin: auto;
+        }
+        label, input, select, table {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Cronograma e Indicadores de Sucesso</h2>
+
+    <!-- Tabela de Cronograma e Indicadores -->
+    <fieldset>
+        <legend>Planejamento e Avaliação</legend>
+
+        <table>
+            <tr>
+                <th>Nome da Ação</th>
+                <th>Data de Início</th>
+                <th>Data de Término</th>
+                <th>Dias Corridos</th>
+                <th>Público (Área-Alvo)</th>
+                <th>Indicador de Sucesso</th>
+                <th>Meta de Resultado</th>
+                <th>Prazo para Avaliação</th>
+                <th>Responsável</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="nome_acao" required></td>
+                <td><input type="date" name="data_inicio" required></td>
+                <td><input type="date" name="data_termino" required></td>
+                <td><input type="number" name="dias_corridos"></td>
+                <td><input type="text" name="publico_alvo"></td>
+                <td><input type="text" name="indicador_sucesso"></td>
+                <td><input type="text" name="meta_resultado"></td>
+                <td><input type="date" name="prazo_avaliacao"></td>
+                <td><input type="text" name="responsavel"></td>
+                <td>
+                    <select name="status" required>
+                        <option value="Planejamento">Planejamento</option>
+                        <option value="Em execução">Em execução</option>
+                        <option value="Concluído">Concluído</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+    </fieldset>
+
+    <button type="submit">Enviar</button>
+
+    <script>
+        document.querySelector("button").addEventListener("click", function(event) {
+            event.preventDefault();
+            alert("Dados enviados com sucesso!");
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Análise Individual de Colaborador</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        label, input, select, textarea, table {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Análise Individual de Colaborador</h2>
+
+    <!-- Seção 1: Para Gestores -->
+    <fieldset>
+        <legend>Para Gestores</legend>
+
+        <label for="dificuldades_colaboradores">Quais colaboradores atualmente apresentam dificuldades ou gaps de desempenho que impactam a entrega dos resultados?</label>
+        <textarea id="dificuldades_colaboradores" name="dificuldades_colaboradores" rows="4"></textarea>
+
+        <label for="potencial_colaboradores">Existem colaboradores que demonstram potencial para assumir novas responsabilidades ou promoções no curto/médio prazo?</label>
+        <textarea id="potencial_colaboradores" name="potencial_colaboradores" rows="4"></textarea>
+
+        <label for="competencias_impacto">Quais competências individuais, se desenvolvidas, poderiam alavancar significativamente o desempenho da equipe?</label>
+        <textarea id="competencias_impacto" name="competencias_impacto" rows="4"></textarea>
+
+    </fieldset>
+
+    <!-- Seção 2: Para Colaboradores -->
+    <fieldset>
+        <legend>Para Colaboradores</legend>
+
+        <label for="desafios_funcao">Quais principais desafios você enfrenta atualmente em sua função?</label>
+        <textarea id="desafios_funcao" name="desafios_funcao" rows="4"></textarea>
+
+        <label for="habilidades_importantes">Quais habilidades, competências ou conhecimentos você acredita que fariam diferença para seu desempenho?</label>
+        <textarea id="habilidades_importantes" name="habilidades_importantes" rows="4"></textarea>
+
+        <label for="treinamentos_uteis">Entre os treinamentos que você já participou, quais foram os mais úteis e por quê?</label>
+        <textarea id="treinamentos_uteis" name="treinamentos_uteis" rows="4"></textarea>
+
+        <label for="lacunas_processos">Você percebe lacunas em processos, ferramentas ou recursos que impactam seu trabalho? Se sim, quais?</label>
+        <textarea id="lacunas_processos" name="lacunas_processos" rows="4"></textarea>
+
+        <label for="formato_desenvolvimento">Qual formato de desenvolvimento você considera mais eficaz para seu aprendizado?</label>
+        <textarea id="formato_desenvolvimento" name="formato_desenvolvimento" rows="4"></textarea>
+
+        <label for="temas_relevantes">Sugira temas, conteúdos ou habilidades que você acredita serem relevantes para o seu desenvolvimento.</label>
+        <textarea id="temas_relevantes" name="temas_relevantes" rows="4"></textarea>
+
+    </fieldset>
+
+    <!-- Seção 3: Levantamento de Dados em Tabela -->
+    <fieldset>
+        <legend>Levantamento de Dados dos Colaboradores</legend>
+
+        <table>
+            <tr>
+                <th>Nome do Colaborador</th>
+                <th>Cargo</th>
+                <th>Gap de Competência</th>
+                <th>Plano de Desenvolvimento Sugerido</th>
+                <th>Formato Preferido de Treinamento</th>
+                <th>Prioridade</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="nome_colaborador" required></td>
+                <td><input type="text" name="cargo" required></td>
+                <td><input type="text" name="gap_competencia"></td>
+                <td><input type="text" name="plano_desenvolvimento"></td>
+                <td><input type="text" name="formato_treinamento"></td>
+                <td>
+                    <select name="prioridade" required>
+                        <option value="Alta">Alta</option>
+                        <option value="Média">Média</option>
+                        <option value="Baixa">Baixa</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+    </fieldset>
+
+    <button type="submit">Enviar</button>
+
+    <script>
+        document.querySelector("button").addEventListener("click", function(event) {
+            event.preventDefault();
+            alert("Dados enviados com sucesso!");
+        });
+    </script>
+
+</body>
+</html>

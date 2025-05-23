@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priorização de Ações T&D</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 800px;
+            margin: auto;
+        }
+        label, input, select, table {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Priorização de Ações T&D</h2>
+
+    <!-- Tabela de Priorização -->
+    <fieldset>
+        <legend>Lista de Ações e Priorização</legend>
+
+        <table>
+            <tr>
+                <th>Treinamento/Programa</th>
+                <th>Área Impactada</th>
+                <th>Departamento</th>
+                <th>Benefício Esperado</th>
+                <th>Custo Estimado</th>
+                <th>Prioridade</th>
+                <th>Prazo para Implementação</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="treinamento_programa" required></td>
+                <td><input type="text" name="area_impactada" required></td>
+                <td><input type="text" name="departamento"></td>
+                <td><input type="text" name="beneficio_esperado"></td>
+                <td><input type="text" name="custo_estimado"></td>
+                <td>
+                    <select name="prioridade" required>
+                        <option value="Alta">Alta</option>
+                        <option value="Média">Média</option>
+                        <option value="Baixa">Baixa</option>
+                    </select>
+                </td>
+                <td><input type="text" name="prazo_implementacao"></td>
+            </tr>
+        </table>
+
+    </fieldset>
+
+    <button type="submit">Enviar</button>
+
+    <script>
+        document.querySelector("button").addEventListener("click", function(event) {
+            event.preventDefault();
+            alert("Dados enviados com sucesso!");
+        });
+    </script>
+
+</body>
+</html>

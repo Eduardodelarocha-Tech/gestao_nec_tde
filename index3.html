@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapeamento das Áreas Estratégicas</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        form { max-width: 600px; margin: auto; }
+        label, textarea { display: block; width: 100%; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h2>Mapeamento das Áreas Estratégicas</h2>
+    
+    <fieldset>
+        <legend>1. Abertura Estratégica</legend>
+        <label for="objetivos_empresa">1.1 Objetivos estratégicos da empresa</label>
+        <textarea id="objetivos_empresa"></textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend>5. Riscos e Custo da Inércia</legend>
+        <label for="riscos_inercia">Se nada for feito, quais riscos podem ocorrer?</label>
+        <textarea id="riscos_inercia"></textarea>
+    </fieldset>
+
+    <button type="submit">Enviar</button>
+
+    <script>
+        document.querySelector("button").addEventListener("click", function(event) {
+            event.preventDefault();
+            alert("Dados enviados com sucesso!");
+        });
+    </script>
+</body>
+</html>
